@@ -1,0 +1,10 @@
+dataclass-wizard==0.35.1
+ipywidgets==8.1.8
+Jinja2===3.1.6
+jupyterlab==4.4.9
+Markdown==3.9
+mcp==1.13.1
+openai==1.107.0
+pydantic===2.11.4
+ruff==0.11.3
+uvicorn==0.35.0

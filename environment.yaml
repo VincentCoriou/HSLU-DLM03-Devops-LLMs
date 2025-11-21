@@ -1,0 +1,5 @@
+name: hslu-dlm03
+dependencies:
+  - python=3.12.0
+  - pip:
+      - -r requirements.txt
