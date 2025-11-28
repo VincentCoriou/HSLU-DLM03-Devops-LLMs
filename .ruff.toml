@@ -1,0 +1,22 @@
+line-length = 120
+target-version = "py312"
+extend-exclude = ["*_test.py"]
+
+[lint]
+select = ["ALL"]
+ignore = ["INP001"]
+fixable = ["ALL"]
+unfixable = []
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+skip-magic-trailing-comma = true
+docstring-code-format = true
+
+[lint.flake8-annotations]
+allow-star-arg-any = true
+
+[lint.extend-per-file-ignores]
+"**/*_test.py" = ["S101", "PT", "PLR0913"]
