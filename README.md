@@ -30,3 +30,34 @@ You can then launch the jupyter lab server with:
 ```bash
 mamba run -n hslu-dlm03 jupyter-lab
 ```
+
+# LLama.cpp
+
+In order to run local LLM models using llama.cpp, you need to install it using:
+
+```bash
+brew install llama.cpp
+```
+
+or download the binaries for your system from [llama.cpp releases](https://github.com/ggerganov/llama.cpp/releases). Don't forget to add the binary to your PATH environment variable for the script to run.
+
+## Models
+
+You can download open-weights LLMs from [Huggingface](https://huggingface.co/models).
+
+For example, you can download the `EmbeddingGemma-300M` model from [here](https://huggingface.co/unsloth/embeddinggemma-300m-GGUF/tree/main) and `Gemma-1b` from [here](https://huggingface.co/brittlewis12/gemma-3-1b-it-GGUF/tree/main) (select the right quantization for your machine, note that in general `Q5_K_S` offer the best balance between performance and memory requirements).
+
+Please add a line to your environment variable file (`.env`) to point to the model directory:
+
+```bash
+export MODEL_ROOT_DIR=/path/to/your/model_directory
+```
+
+You can then modify the relative path to your wanted model in the `llm-server.sh` and `embeddings-server.sh` scripts.
+
+and run the servers with:
+
+```bash
+sh llm-server.sh
+sh embeddings-server.sh
+```

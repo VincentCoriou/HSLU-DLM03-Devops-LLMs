@@ -4,8 +4,11 @@ ipywidgets==8.1.8
 Jinja2===3.1.6
 jupyterlab==4.4.9
 Markdown==3.9
+matplotlib==3.10.8
 mcp==1.13.1
+numpy==2.3.5
 openai==1.107.0
+pandas==2.3.3
 pydantic===2.11.4
 ruff==0.11.3
 uvicorn==0.35.0
